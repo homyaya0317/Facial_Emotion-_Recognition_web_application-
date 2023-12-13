@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facial Emotion Recognition</title>
+    <style>
+
+.container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(67, 66, 66);
+            padding: 10px;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            color: white;
+            text-decoration: none; /* To remove the default underline */
+        }
+
+        .help-button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            text-decoration: none; /* To remove the default underline */
+            cursor: pointer;
+        }
+
+        .help-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Style the "Choose File" button */
+        input[type="file"] {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        /* Style the "Predict" button */
+        input[type="submit"] {
+            padding: 12px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+    
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><center>facial-emotion-recognition Classification </center></a>
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Help</button>
+        </div>
+    </nav>
+   
+    <br/>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" capture>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
+
